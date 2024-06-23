@@ -1,6 +1,7 @@
 ## Description
 
 [Hono](https://hono.dev) - [炎] means flame🔥 in Japanese - is a small, simple, and ultrafast web framework for the Edges.
+[Postman Collection](https://elements.getpostman.com/redirect?entityId=8211085-758f39bd-ce64-4d3a-8780-33747b21111b&entityType=collection) - Postman Collection
 
 ## Requirements
 
