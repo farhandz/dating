@@ -5,6 +5,10 @@
 ## API Test
 [Postman Collection](https://elements.getpostman.com/redirect?entityId=8211085-758f39bd-ce64-4d3a-8780-33747b21111b&entityType=collection) - Postman Collection
 
+## ERD
+[DB DIAGRAM](https://dbdiagram.io/d/66779f065a764b3c722a60ae) - ERD with DBDIAGRAM
+
+
 ## Requirements
 
 - NodeJS v18.19.0 LTS/Hydrogen
