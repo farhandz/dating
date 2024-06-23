@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+YELLOW='\033[0;33m'
+GREEN='\033[0;32m'
+NC='\033[0m'
+
+echo "${YELLOW}============================================"
+echo "DON'T FORGET TO RUN${NC} ${GREEN}bun generate migration${NC}"
+echo "${YELLOW}IF YOU MAKE ANY CHANGES ON SCHEMA!"
+echo "============================================${NC}"
+
+bun lint

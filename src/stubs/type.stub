@@ -1,0 +1,4 @@
+import { z } from 'zod';
+import { SampleValidation } from '../validations/__MODULE_NAME_FOLDER__';
+
+export type Sample = z.infer<typeof SampleValidation>;

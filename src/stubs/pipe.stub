@@ -1,0 +1,17 @@
+import { HonoRequest } from 'hono';
+import { HTTPException } from 'hono/http-exception';
+import { SampleValidation } from '../../validations/__MODULE_NAME_FOLDER__';
+import { Sample } from '../../types';
+
+export const SamplePipe = async (body: HonoRequest): Promise<Sample> => {
+  const validate = await SampleValidation.safeParseAsync(body);
+  if (!validate.success) {
+    const error: any = 'error' in validate ? validate.error.format() : null;
+    throw new HTTPException(422, {
+      res: error,
+      message: 'validation error',
+    });
+  }
+
+  return validate.data;
+};

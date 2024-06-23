@@ -1,0 +1,15 @@
+import { Repository } from 'typeorm';
+import database from '../../database';
+import { __ENTITY_NAME__ } from '../../entities';
+
+export class __MODULE_NAME__Service {
+  private __MODULE_NAME_LOWER__Repo: Repository<__ENTITY_NAME__>;
+
+  constructor() {
+    this.__MODULE_NAME_LOWER__Repo = database.getRepository(__ENTITY_NAME__);
+  }
+
+  async sample(): Promise<__ENTITY_NAME__[]> {
+    return await this.__MODULE_NAME_LOWER__Repo.find();
+  }
+}

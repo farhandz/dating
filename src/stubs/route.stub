@@ -1,0 +1,11 @@
+import { Hono } from 'hono';
+import { __MODULE_NAME__Controller } from '../modules/__MODULE_NAME_FOLDER__/controller';
+
+const __MODULE_NAME_LOWER__ = new Hono();
+const __MODULE_NAME_LOWER__Controller = new __MODULE_NAME__Controller();
+
+__MODULE_NAME_LOWER__.get('/', async (c) => {
+  return c.json(await __MODULE_NAME_LOWER__Controller.sample(await c.req.json()));
+});
+
+export const __MODULE_NAME_LOWER__Route = __MODULE_NAME_LOWER__;

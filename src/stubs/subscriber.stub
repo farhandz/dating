@@ -1,0 +1,20 @@
+import {
+  EventSubscriber,
+  EntitySubscriberInterface,
+  InsertEvent,
+} from 'typeorm';
+import { __ENTITY_NAME__ } from '../entities';
+import { v4 as uuid } from 'uuid';
+
+@EventSubscriber()
+export class __MODULE_NAME__Subscriber implements EntitySubscriberInterface<__ENTITY_NAME__> {
+  listenTo() {
+    return __ENTITY_NAME__;
+  }
+
+  async beforeInsert(event: InsertEvent<__ENTITY_NAME__>) {
+    event.entity.id = uuid();
+    event.entity.created_by = event.entity.created_by || event.entity.id;
+    event.entity.updated_by = event.entity.updated_by || event.entity.id;
+  }
+}

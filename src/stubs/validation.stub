@@ -1,0 +1,7 @@
+import { z } from 'zod';
+
+export const SampleValidation = z
+  .object({
+    sample: z.string(),
+  })
+  .strict();

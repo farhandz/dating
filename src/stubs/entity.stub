@@ -1,0 +1,8 @@
+import { Column, Entity } from 'typeorm';
+import { __ENTITY_MODE__ } from './base/__ENTITY_MODE__';
+
+@Entity({ name: '__TABLE_NAME__' })
+export class __ENTITY_NAME__ extends __ENTITY_MODE__ {
+  @Column()
+  name: string;
+}

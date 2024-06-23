@@ -1,0 +1,16 @@
+import { HonoRequest } from 'hono';
+import { __MODULE_NAME__Service } from './service';
+import { GeneralResponse } from '../../types';
+
+export class __MODULE_NAME__Controller {
+  private __MODULE_NAME_LOWER__Service: __MODULE_NAME__Service;
+
+  constructor() {
+    this.__MODULE_NAME_LOWER__Service = new __MODULE_NAME__Service();
+  }
+
+  async sample(body: HonoRequest): Promise<GeneralResponse> {
+    const data = await this.__MODULE_NAME_LOWER__Service.sample();
+    return { message: null, data: { body, data }, code: 200 };
+  }
+}
